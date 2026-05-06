@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo-deployment
-  namespace: mongodb
+  name: "{{.Values.deployment.deployment-name}}"
+  namespace: "{{.Values.deployment.namspace}}"
   labels:
-    app: mongo
+    app: "{{.Values.deployment.deployment-name}}"
     project: roboshop
     environment: dev
     purpose: poc
@@ -17,7 +17,7 @@ spec:
   replicas: {{ .Values.deployment.replicas }}         #integer should be no quoted 
   selector:
     matchLabels:  
-      app: mongo
+      app: "{{.Values.deployment.deployment-name}}"
       project: roboshop
       environment: dev
       purpose: poc
@@ -27,13 +27,13 @@ spec:
   template:
     metadata:
       labels:
-        app: mongo
+        app: "{{.Values.deployment.deployment-name}}"
         project: roboshop
         environment: dev
         purpose: poc
     spec:
       containers:
-      - name: mongodb
+      - name: "{{.Values.container.name}}"
         image: "{{ .Values.deployment.imageVersion }}"
         ports:
         - containerPort: 27017

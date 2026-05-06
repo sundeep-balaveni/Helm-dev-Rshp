@@ -2,4 +2,12 @@ deployment:
   replicas: 1
   changecause: "installing the lastest version"
   imageVersion: sandeep0109/catalouge:2.2.2
+  deployment-name: catalouge-deployment
+  namespace: catalouge
+
+service:
+  name: catalouge-service
+
+container:
+  name: catalouge
 
