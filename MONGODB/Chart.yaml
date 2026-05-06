@@ -1,7 +1,16 @@
 
 
 
+# apiVersion: v1   #k8s version
+# name : mongodb
+# version : 0.0.1  #this is the chart version
+# appVersion: latest  #application version like nginx
+
+
+
+
+
 apiVersion: v1   #k8s version
 name : mongodb
 version : 0.0.1  #this is the chart version
-appVersion: latest  #application version like nginx
+appVersion: 2.2.2  #application version like nginx
