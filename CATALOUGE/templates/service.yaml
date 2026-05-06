@@ -22,4 +22,4 @@ spec:
   - protocol: TCP
     port: 8080  #service port
     targetPort: 80 #container port
-    nodePort: 30019
+    nodePort: 30017
