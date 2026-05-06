@@ -4,7 +4,7 @@ metadata:
   name: "{{ .Values.deployment.deploymentName }}"
   namespace: "{{.Values.deployment.namspace}}"
   labels:
-    app: "{{.Values.deployment.deployment-name}}"
+    app: "{{ .Values.deployment.deploymentName }}"
     project: roboshop
     environment: dev
     purpose: poc
