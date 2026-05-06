@@ -38,9 +38,9 @@ spec:
         ports:
         - containerPort: 8080
 
-      envFrom:
-       - configMapRef:
-         name: "{{.Values.service.name}}"
+        envFrom:
+          - configMapRef:    
+            name: "{{.Values.service.name}}"
       
       annotations:
         kubernetes.io/change-cause: "{{ .Values.deployment.changecause }}"   #if something changes in spec it will deploy new pod 
