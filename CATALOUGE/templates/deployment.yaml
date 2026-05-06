@@ -9,8 +9,8 @@ metadata:
     environment: dev
     purpose: poc
 
-  annotations:
-    kubernetes.io/change-cause: "{{.Values.deployment.changecause}}"
+  # annotations:
+  #   kubernetes.io/change-cause: "{{.Values.deployment.changecause}}"  this is meta data if you change in this it wont deploy the new pos 
 
     # the namespace in which the deployment will be created 
 spec: 
@@ -37,3 +37,10 @@ spec:
         image: "{{ .Values.deployment.imageVersion }}"
         ports:
         - containerPort: 8080
+
+      envFrom:
+       - configMapRef:
+         name: "{{.Values.service.name}}"
+      
+      annotations:
+        kubernetes.io/change-cause: "{{ .Values.deployment.changecause }}"   #if something changes in spec it will deploy new pod 
