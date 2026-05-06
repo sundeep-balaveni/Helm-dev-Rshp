@@ -1,6 +1,6 @@
 deployment:
   replicas: 1
-  changecause: "installing the lastest version - added the config "
+  changecause: "installing the lastest version - added the config to the pod  "
   imageVersion: sandeep0109/catalogue:2.2.2
   deploymentName: catalougedeployment
   namespace: catalouge
