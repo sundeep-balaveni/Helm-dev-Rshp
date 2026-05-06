@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "{{.Values.deployment.deployment-name}}"
+  name: "{{ .Values.deployment.deploymentName }}"
   namespace: "{{.Values.deployment.namspace}}"
   labels:
     app: "{{.Values.deployment.deployment-name}}"
@@ -17,7 +17,7 @@ spec:
   replicas: {{ .Values.deployment.replicas }}         #integer should be no quoted 
   selector:
     matchLabels:  
-      app: "{{.Values.deployment.deployment-name}}"
+      app: "{{ .Values.deployment.deploymentName }}"
       project: roboshop
       environment: dev
       purpose: poc
@@ -27,7 +27,7 @@ spec:
   template:
     metadata:
       labels:
-        app: "{{.Values.deployment.deployment-name}}"
+        app: "{{ .Values.deployment.deploymentName }}"
         project: roboshop
         environment: dev
         purpose: poc
