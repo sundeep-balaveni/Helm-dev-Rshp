@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-deployment
+  namespace: mongodb
+  labels:
+    app: mongo
+    project: roboshop
+    environment: dev
+    purpose: poc
+
+  annotations:
+    kubernetes.io/change-cause: "{{.Values.deployment.changecause}}"
+
+    # the namespace in which the deployment will be created 
+spec:
+  replicas: "{{.Values.deployment.replicas}}"
+  selector:
+    matchLabels:
+      
+      app: mongo
+      project: roboshop
+      environment: dev
+      purpose: poc
+
+# the pod template
+
+  template:
+    metadata:
+      labels:
+        app: mongo
+        project: roboshop
+        environment: dev
+        purpose: poc
+    spec:
+      containers:
+      - name: mongodb
+        image: "{{ .Values.deployment.imageVersion }}"
+        ports:
+        - containerPort: 27017

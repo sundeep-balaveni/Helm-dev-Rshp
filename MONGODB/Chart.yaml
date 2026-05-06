@@ -1,0 +1,7 @@
+
+
+
+apiVersion: v1   #k8s version
+name : Mongo-db-server
+version : 0.0.1  #this is the chart version
+appVersion: latest  #application version like nginx
