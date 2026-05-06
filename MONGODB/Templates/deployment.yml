@@ -14,7 +14,7 @@ metadata:
 
     # the namespace in which the deployment will be created 
 spec: 
-  replicas: {{.Values.deployment.replicas}}         #integer should be no quoted 
+  replicas: {{ .values.deployment.replicas }}         #integer should be no quoted 
   selector:
     matchLabels:
       
