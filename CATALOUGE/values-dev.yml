@@ -1,0 +1,5 @@
+deployment:
+  replicas: 3
+  changecause: "installing the lastest version"
+  imageVersion: sandeep0109/mongodb:2.2.2
+  namespace: mongodb

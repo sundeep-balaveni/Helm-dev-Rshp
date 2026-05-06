@@ -1,0 +1,23 @@
+#Service 
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+  namespace: mongodb
+  labels:
+    project: roboshop
+    environment: dev
+    purpose: poc
+
+spec:
+  type: ClusterIP
+  selector:
+    app: mongo
+    project: roboshop
+    environment: dev
+    purpose: poc 
+  ports:
+  - protocol: TCP
+    port: 27017  #service port
+    targetPort: 27017 #container port
