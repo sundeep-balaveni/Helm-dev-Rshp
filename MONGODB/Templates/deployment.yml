@@ -13,8 +13,8 @@ metadata:
     kubernetes.io/change-cause: "{{.Values.deployment.changecause}}"
 
     # the namespace in which the deployment will be created 
-spec:
-  replicas: "{{.Values.deployment.replicas}}"
+spec: 
+  replicas: {{.Values.deployment.replicas}}         #integer should be no quoted 
   selector:
     matchLabels:
       
