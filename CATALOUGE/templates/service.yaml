@@ -20,6 +20,6 @@ spec:
   
   ports:
   - protocol: TCP
-    port: 27017  #service port
-    targetPort: 27017 #container port
+    port: 8080  #service port
+    targetPort: 80 #container port
     nodePort: 30017

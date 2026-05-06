@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "{{ .Values.deployment.deploymentName }}"
-  namespace: "{{.Values.deployment.namspace}}"
+  namespace: "{{.Values.deployment.namespace}}"
   labels:
     app: "{{ .Values.deployment.deploymentName }}"
     project: roboshop

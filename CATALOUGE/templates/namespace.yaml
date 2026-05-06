@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name:   "{{.Values.deployment.namspace}}" #why different namespace for each application? to isolate the applications and to manage the resources of each application separately
+  name:   "{{.Values.deployment.namespace}}" #why different namespace for each application? to isolate the applications and to manage the resources of each application separately
   labels:
     project: roboshop
     environment: dev
