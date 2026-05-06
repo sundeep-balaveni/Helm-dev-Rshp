@@ -36,4 +36,4 @@ spec:
       - name: "{{.Values.container.name}}"
         image: "{{ .Values.deployment.imageVersion }}"
         ports:
-        - containerPort: 27017
+        - containerPort: 8080
