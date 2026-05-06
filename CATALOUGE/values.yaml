@@ -6,7 +6,7 @@ deployment:
   namespace: catalouge
 
 service:
-  name: catalouge-service
+  name: catalougeService
 
 container:
   name: catalouge
